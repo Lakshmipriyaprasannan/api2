@@ -44,15 +44,5 @@ public class UserController {
 	public ResponseEntity<UserResponse> deleteUser(@PathVariable("userId")  Long userId) {
 		return new ResponseEntity<UserResponse>(userService.deleteUser(userId), HttpStatus.OK);
 	}
-
-	 public User UserRequestToUser(UserRqt userRqt) {
-			User user = new User();
-			user.setUserId(userRqt.getRqtuserId());
-			user.setName(userRqt.getRqtname());
-			user.setDob(userRqt.getRqtdob());
-			user.setEmail(userRqt.getRqtemail());
-			user.setMobile(userRqt.getRqtmobile());
-			return user;
-		}
 	
 }
